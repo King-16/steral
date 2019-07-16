@@ -1,0 +1,1402 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h1, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* This stylesheet generated by Transfonter (https://transfonter.org) on October 3, 2017 10:05 PM */
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Light.eot");
+  src: local("Montserrat Light"), local("Montserrat-Light"), url("../fonts/Montserrat/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-MediumItalic.eot");
+  src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"), url("../fonts/Montserrat/Montserrat-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-MediumItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Thin.eot");
+  src: local("Montserrat Thin"), local("Montserrat-Thin"), url("../fonts/Montserrat/Montserrat-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Thin.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraLightItalic.eot");
+  src: local("Montserrat ExtraLight Italic"), local("Montserrat-ExtraLightItalic"), url("../fonts/Montserrat/Montserrat-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraLightItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-BoldItalic.eot");
+  src: local("Montserrat Bold Italic"), local("Montserrat-BoldItalic"), url("../fonts/Montserrat/Montserrat-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat - Semi Bold';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.eot");
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url("../fonts/Montserrat/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraLight.eot");
+  src: local("Montserrat ExtraLight"), local("Montserrat-ExtraLight"), url("../fonts/Montserrat/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.eot");
+  src: local("Montserrat ExtraBold Italic"), local("Montserrat-ExtraBoldItalic"), url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Italic.eot");
+  src: local("Montserrat Italic"), local("Montserrat-Italic"), url("../fonts/Montserrat/Montserrat-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat - Bold';
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-LightItalic.eot");
+  src: local("Montserrat Light Italic"), local("Montserrat-LightItalic"), url("../fonts/Montserrat/Montserrat-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-LightItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-BlackItalic.eot");
+  src: local("Montserrat Black Italic"), local("Montserrat-BlackItalic"), url("../fonts/Montserrat/Montserrat-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-BlackItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-SemiBoldItalic.eot");
+  src: local("Montserrat SemiBold Italic"), local("Montserrat-SemiBoldItalic"), url("../fonts/Montserrat/Montserrat-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBoldItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Medium.eot");
+  src: local("Montserrat Medium"), local("Montserrat-Medium"), url("../fonts/Montserrat/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot");
+  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"), url("../fonts/Montserrat/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Black.eot");
+  src: local("Montserrat Black"), local("Montserrat-Black"), url("../fonts/Montserrat/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ThinItalic.eot");
+  src: local("Montserrat Thin Italic"), local("Montserrat-ThinItalic"), url("../fonts/Montserrat/Montserrat-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ThinItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+h2, h1 {
+  color: #1b1619;
+  font-family: 'Montserrat';
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+h3 {
+  font-family: "Montserrat - Semi Bold";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+h4 {
+  color: #303030;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+a {
+  text-decoration: none;
+  color: #090708;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: #08588a;
+  color: #fff;
+  font-family: "Montserrat - Semi Bold";
+  font-size: 16px;
+  display: block;
+}
+
+.arrow i {
+  font-size: 50px;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  padding-top: 67px;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+header .header__nav-item {
+  margin: 0 25px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+header .header__contact-item {
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+
+header .header__contact .drop__contact {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  right: 0;
+  transition: 4.8s all ease-in;
+}
+
+header .header__contact .contact__list {
+  transition: 4.8s all ease-in;
+  position: relative;
+}
+
+header .header__contact .contact__list:hover .drop__contact {
+  display: block;
+  transition: 4.8s all ease-in;
+}
+
+header .header__lang {
+  text-align: center;
+}
+
+header .header__lang-item {
+  color: #090708;
+  font-size: 15px;
+  margin: 0 15px;
+}
+
+header .header__lang-item:hover {
+  text-decoration: underline;
+}
+
+.mobile__menu {
+  display: none;
+}
+
+.first__screen {
+  margin-top: 160px;
+}
+
+.first__screen .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 60px;
+}
+
+.first__screen-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.first__screen-block:nth-child(2) {
+  grid-column-gap: 40px;
+}
+
+.first__screen p {
+  margin: 30px 0;
+}
+
+.first__screen .btn {
+  padding: 14px 30px;
+  border-radius: 18px;
+  margin-top: 30px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.first__screen .btn:hover {
+  background: #05395a;
+  cursor: pointer;
+}
+
+.prices__services {
+  margin: 50px 0;
+}
+
+.prices__services h2, .prices__services h1 {
+  text-align: center;
+}
+
+.prices__services p {
+  margin: 22px 0;
+}
+
+.prices__services .container {
+  max-width: 1155px;
+}
+
+.prices__services .services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  margin-top: 40px;
+}
+
+.prices__services .services__item {
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 3px 9px 1px rgba(64, 64, 64, 0.2);
+  position: relative;
+}
+
+.prices__services .services__item:focus {
+  border-bottom: 3px solid #285776;
+}
+
+.prices__services .services__item:hover {
+  cursor: pointer;
+}
+
+.prices__services h3 {
+  margin: 25px 0;
+}
+
+.prices__services .price {
+  color: #2b5fa5;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.prices__services .tab__input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.prices__services .services__description {
+  width: 100%;
+  padding: 65px 70px 65px 70px;
+  box-sizing: border-box;
+  box-shadow: 2px 3px 4px 1px rgba(64, 64, 64, 0.19);
+}
+
+.prices__services .content__item {
+  margin: 10px 0;
+  text-align: center;
+  display: none;
+}
+
+.prices__services .db {
+  display: block;
+}
+
+.prices__services .dn {
+  display: none;
+}
+
+.prices__services .active {
+  border-bottom: 10px solid #285776;
+}
+
+.production {
+  position: relative;
+  margin-top: 280px;
+}
+
+.production .water__img {
+  position: absolute;
+  left: -20%;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.production h2, .production h1 {
+  text-align: center;
+}
+
+.production .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+.production .slider__item {
+  margin: 0 25px;
+  cursor: pointer;
+}
+
+.doscoint {
+  margin-top: 350px;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.doscoint .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.doscoint .form h2, .doscoint .form h1 {
+  color: #e10b0b;
+  font-size: 94px;
+  font-weight: 700;
+}
+
+.doscoint .form p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.doscoint .form__item {
+  display: block;
+  max-width: 360px;
+  width: 100%;
+  margin: 25px 0;
+  color: #050505;
+  font-family: "Montserrat - Semi Bold";
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  border: 1px solid #0b0b0b;
+  border-radius: 5px;
+  padding: 6px 20px;
+}
+
+.doscoint .btn {
+  padding: 19px 26px;
+  border-radius: 10px;
+  margin-top: 25px;
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.doscoint .timer p {
+  color: #1b1619;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.doscoint .form p {
+  color: #050505;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.doscoint .timer__block {
+  display: block;
+  background: url("../img/comp.png") center center no-repeat;
+  background-size: cover;
+  height: 590px;
+  width: 810px;
+  text-align: center;
+}
+
+.doscoint .timer__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60%;
+  color: #ffffff;
+  font-family: "Montserrat - Semi Bold";
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.doscoint .day__num {
+  color: #fff;
+  font-family: "Montserrat - Semi Bold";
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+}
+
+.doscoint .sec__num {
+  color: #eb1010;
+}
+
+.doscoint .timer__item .sec__title {
+  color: #eb1010;
+}
+
+.doscoint .day__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+}
+
+.doscoint .timer__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews h2, .reviews h1 {
+  text-align: center;
+}
+
+.reviews .reviews__block {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews .reviews__block-item {
+  text-align: center;
+  box-shadow: 2px 3px 9px 1px rgba(64, 64, 64, 0.2);
+  padding: 60px 50px 90px 50px;
+  margin: 0 15px;
+}
+
+.reviews .reviews__block-item img {
+  margin: 0 auto;
+}
+
+.reviews .reviews__block-item:hover {
+  cursor: pointer;
+}
+
+.reviews .reviews__block h3 {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.reviews .slick-slide {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.last__news {
+  margin-top: 230px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.last__news h2, .last__news h1 {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.last__news h3 {
+  margin-bottom: 35px;
+}
+
+.last__news .container {
+  max-width: 1210px;
+}
+
+.last__news .news__block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  z-index: 1;
+}
+
+.last__news .news__block-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+}
+
+.last__news .btn {
+  max-width: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 17px 70px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+.last__news .water {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  z-index: -1;
+  position: absolute;
+  right: -20%;
+  bottom: 0;
+  top: 0;
+}
+
+.last__news .detalia {
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px dashed #000;
+}
+
+.contact__info {
+  margin-top: 100px;
+}
+
+.contact__info h2, .contact__info h1 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact__info .blue {
+  color: #08588a;
+}
+
+.contact__info .container {
+  max-width: 1140px;
+}
+
+.contact__info .work__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.contact__info .contact__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__info .phone {
+  display: block;
+  color: #303030;
+  font-family: "Montserrat - Semi Bold";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact__info h4 {
+  margin-bottom: 25px;
+}
+
+.contact__info .adress__title {
+  margin-top: 15px;
+}
+
+.contact__info .social__item {
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  margin: 0 15px;
+}
+
+.contact__info .social__item:first-child {
+  margin-left: 0;
+}
+
+.map {
+  margin: 80px 0;
+}
+
+.map .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map__frame {
+  height: 450px;
+  width: 100%;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  max-width: 455px;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 600px;
+  z-index: 99999999999999;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 4px 52px 5px rgba(49, 49, 49, 0.27);
+  background: #fff;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.popup .input__item {
+  max-width: 320px;
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px 0;
+  padding-left: 20px;
+  background: #e8e8e8;
+  border: none;
+  color: #6b6b6b;
+}
+
+.popup .close {
+  margin-left: 80%;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.popup h2, .popup h1 {
+  margin-bottom: 50px;
+}
+
+.popup textarea {
+  margin-top: 30px;
+}
+
+.popup .btn {
+  display: inline-block;
+  padding: 10px 85px;
+  max-width: 270px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+.show {
+  display: block;
+}
+
+.dn {
+  display: none;
+}
+
+.arrow i {
+  cursor: pointer;
+}
+
+.call__icon {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.call__icon img {
+  height: 80px;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 678px;
+  }
+  header {
+    width: 100%;
+  }
+  header .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  header .header__nav {
+    margin-top: 45px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  header .header__nav-item {
+    font-size: 20px;
+  }
+  header .header__contact {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  header .header__lang {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .first__screen img {
+    max-width: 100%;
+  }
+  .first__screen .container {
+    grid-template-columns: 1fr;
+  }
+  .first__screen .first__screen-block {
+    grid-template-columns: 1fr;
+  }
+  .first__screen .first__screen-block:last-child .text {
+    margin-top: 90px;
+  }
+  .prices__services .services {
+    grid-column-gap: 5px;
+  }
+  .prices__services .services__description {
+    padding-top: 65px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .production .container {
+    max-width: 100%;
+  }
+  .production img.water__img {
+    display: none;
+  }
+  .doscoint .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .doscoint .form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  .doscoint .form__item {
+    margin: 10px 0;
+  }
+  .doscoint img {
+    max-width: 100%;
+  }
+  .reviews .container {
+    max-width: 768px;
+    width: 100%;
+  }
+  .reviews__block-item {
+    padding: 30px 16px 70px 16px;
+  }
+  .reviews__block .photo {
+    width: 100px;
+  }
+  .last__news .container {
+    max-width: 602px;
+    margin: 0 auto;
+  }
+  .last__news .water {
+    display: none;
+  }
+  .last__news .news__block-item {
+    grid-template-columns: 1fr;
+  }
+  .last__news h3 {
+    margin-top: 62px;
+  }
+  .doscoint .timer__block {
+    height: 590px;
+    width: 100%;
+  }
+  .contact__info .container {
+    max-width: 680px;
+  }
+  .contact__info .for__mobile {
+    display: flex;
+  }
+  .contact__info .contact__block {
+    flex-direction: column;
+  }
+  .map img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 245px;
+  }
+  .first__screen {
+    margin-top: 320px;
+  }
+  .mobile__menu {
+    display: block;
+  }
+  .mb {
+    margin-bottom: 245px;
+  }
+  .contact__list .header__contact-item {
+    display: inline-block;
+    text-align: center;
+  }
+  .header__nav, .header__contact {
+    visibility: hidden;
+  }
+  .mobeile__menu {
+    position: relative;
+  }
+  .header__nav, .header__contact {
+    position: absolute;
+  }
+  .header__nav {
+    margin-bottom: 600px !important;
+  }
+  .header__contact li {
+    text-align: center;
+  }
+  .header__nav {
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header__nav-item {
+    text-align: center;
+    display: block;
+    padding: 10px;
+  }
+  .header__contact {
+    top: 300px;
+    right: 0;
+    left: 0;
+  }
+  .header__contact-item {
+    text-align: center;
+    display: block;
+  }
+  .header__lang {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: block;
+  }
+  .prices__services .services {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .prices__services .container {
+    max-width: 680px;
+  }
+  .doscoint {
+    margin-top: 0;
+  }
+  .doscoint .container {
+    max-width: 440px;
+  }
+  .doscoint .form h2, .doscoint .form h1 {
+    font-size: 37px;
+  }
+  .doscoint .form p {
+    font-size: 16px;
+    text-align: left;
+  }
+  .doscoint img {
+    max-width: 80%;
+  }
+  .doscoint .timer__block {
+    max-width: 400px;
+  }
+  .last__news .container {
+    max-width: 280px;
+  }
+  .last__news img {
+    max-width: 90%;
+  }
+  .contact__info .for__mobile {
+    flex-direction: column;
+  }
+  .contact__info .contact__block {
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .call__icon img {
+    width: 80px;
+  }
+}
+
+.active__menu {
+  visibility: visible;
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+  .doscoint .container {
+    max-width: 300px;
+  }
+  .timer__block {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,136 @@
+@import "_reset";
+@import "_font";
+
+body{
+	font-family: 'Montserrat';
+	overflow-x: hidden;
+}
+
+
+h1{
+	color: #1b1619;
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 170px;
+}
+
+h2{
+	font-family: "Montserrat - Bold";
+	font-weight: 700;
+	letter-spacing: 0.4px;
+}
+
+p{
+	color: #1b1619;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	margin: 20px 0;
+}
+
+a{
+	text-decoration: none;
+	color: #090708;
+}
+
+.container{
+	max-width: 1140px;
+	width: 100%;
+	margin: 0;
+	margin: 0 auto;
+	// border: 1px solid black;
+}
+.btn{
+	background-color: #08588a;
+	color: #fff;
+	font-family: "Montserrat - Semi Bold";
+	font-size: 16px;
+	display: block;
+}
+
+.head__panel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.back__home{
+	display: flex;
+	align-items: center;
+	i{
+		margin-right: 10px;
+		font-size: 40px;
+	}
+	a{
+		color: #090708;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+}
+
+.content{
+	max-width: 950px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.date{
+	display: block;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.post{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 50px;
+	align-items: center;
+	color: #1b1619;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 80px;
+	margin-top: 70px;
+	p{
+		font-family: "Montserrat Medium";
+		font-weight: 500;
+		letter-spacing: 0.4px;
+	}
+}
+.like__title{
+	margin-top: 5px;
+}
+.like__block{
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.detalia{
+		text-align: center;
+		position: relative;
+		margin-left: 80%;
+		display: inline-block;
+		border-bottom: 1px dashed #000;
+	}
+.water__first{
+	-moz-transform: scaleX(-1);
+     -o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+    -ms-filter: "FlipH";
+		z-index: -1;
+		position: absolute;
+		right: -110%;
+		top: 50%;
+	}
+.water{
+	z-index: -1;
+	position: absolute;
+	left: -50%;
+	bottom: -5%;
+}
+@import "_mediaForRead";
