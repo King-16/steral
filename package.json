@@ -9,7 +9,7 @@
   "author": "Dima Navrotskiy",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-butternut": "^1.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-sass": "^4.0.2",
